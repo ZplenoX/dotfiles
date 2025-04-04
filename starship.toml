@@ -1,0 +1,45 @@
+add_newline = false 
+format = """
+[╭─](bold #DEE1EE)[](#DEE1EE)\
+$directory\
+[](bg:#9EC9B7 fg:#DEE1EE)\
+$git_branch$git_status\
+[](fg:#9EC9B7)\
+\n[╰─>](bold #DEE1EE) 
+"""
+
+[directory]
+format = "[  $path ]($style)"
+style = "bg:#DEE1EE fg:#1E1E2E bold"  # Daha açık beyaz, koyu yazı
+
+[git_branch]
+symbol = " "
+format = "[ $symbol$branch ]($style)"
+style = "bg:#9EC9B7 fg:#1E1E2E bold"  # Tek pastel renk: su yeşili
+
+[git_status]
+format = '[ $all_status$ahead_behind ]($style)'
+style = "bg:#9EC9B7 fg:#1E1E2E bold"  # Aynı pastel renk
+
+[shell]
+bash_indicator = ""
+zsh_indicator = ""
+fish_indicator = "󰈺"
+format = " [$indicator]($style)"
+style = "bold #9EC9B7"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[  $time ](bold #9EC9B7)"
+
+[cmd_duration]
+format = "[  $duration ](bold #9EC9B7)"
+min_time = 500  # 500ms üzerinde olanları göster
+show_milliseconds = false
+
+[package]
+symbol = " "
+format = "[ $symbol$version ](bold #DEE1EE)"
+disabled = false

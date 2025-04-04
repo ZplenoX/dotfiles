@@ -1,0 +1,12 @@
+/* Nocturne Aydınlık Tema Renk Paleti */
+
+@define-color background #FFFFFF;    /* Beyaz arka plan */
+@define-color surface #F0F0F0;      /* Çok açık gri, yüzey tonu */
+@define-color highlight #E0E0E0; /* Soğuk beyaz */
+@define-color soft #D9D9D9;    /* Yumuşak, sarımsı beyaz */
+@define-color shadow #B0B0B0;       /* Açık gri gölge */
+@define-color accent #A1A1A1; /* Açık gri tonları */
+@define-color light #F8F8F8;         /* Çok açık gri beyaz */
+@define-color active #B8B8B8;  /* Gri tonları */
+@define-color shadow #D0D0D0;  /* Açık gri, panel gölgesi */
+@define-color dark #1e1e1e;

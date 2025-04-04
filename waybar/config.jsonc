@@ -1,0 +1,174 @@
+{
+  // Waybar Config
+  "layer": "top",
+  "height": 40,
+  "modules-left": [
+    "group/powermenu",
+    "custom/seperator",
+    "hyprland/window",
+    "mpris",
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+    "clock",
+  ],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "custom/seperator",
+    "custom/swaync",
+  ],
+"hyprland/workspaces": {
+    "format": "{name}",
+ "format-icons": {
+      "default": "",
+      "active": "",
+      "urgent": "",
+    },
+    
+
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%A %d     %H:%M} ",
+    "tooltip": false,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "gnome-clocks",
+    "on-click-right": "gnome-calendar",
+    "calendar": {
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+    }
+  },
+  "network": {
+    "format": " ",
+    "tooltip-format": "Bağlı: {essid}\nIP: {addr}",
+    "format-connected": "<span color='#99ff99'></span>",
+    "format-disconnected": "<span color='#ff6666'></span>",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "tooltip-format": "Ses seviyesi: {volume}%",
+    "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+    "format": "",
+    "tooltip-format": "Bluetooth: {status}",
+    "format-connected": "<span color='#99ff99'></span>",
+    "format-disconnected": "<span color='#ff6666'></span>",
+    "on-click": "blueman-manager"
+  },
+  "custom/swaync": {
+    "tooltip": true,     
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "🔔<span foreground='red'><sup></sup></span>",
+      "none": "🔔",
+      "dnd-notification": "🔕<span foreground='red'><sup></sup></span>",
+      "dnd-none": "🔕",
+      "inhibited-notification": "🔔<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "🔔",
+      "dnd-inhibited-notification": "🔕<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "🔕"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "hyprland/window": {
+    "format": " {initialTitle} ",
+    "max-length": 60,
+    "separate-outputs": true,
+    "offscreen-css" : true,
+    "offscreen-css-text": "(inactive)"
+  },
+
+   "custom/seperator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "mpris": {
+  "tooltip": false,
+	"format": "  {title}",
+	"format-paused": "  {title}",
+  "format-stopped": "  {title}",
+	"ignored-players": ["firefox","kdeconnect"],
+},
+"group/powermenu": {
+  "orientation": "inherit",
+  "drawer": {
+      "transition-duration": 200,
+    },
+  "modules": [ 
+    "custom/quit",
+    "custom/reboot",
+    "custom/lock",
+    "custom/sleep",
+  ]
+
+},
+  "custom/quit": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "shutdown now",
+},
+
+"custom/reboot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "reboot",
+},
+
+"custom/lock": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprlock",
+},
+  "custom/sleep": {
+   "format": "",
+   "tooltip": false,
+   "on-click": "systemctl suspend",
+},
+
+"custom/screenshot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprshot -m region",
+    "on-click-right": "hyprshot -m window",
+    "on-click-middle": "hyprshot -m output",
+},
+
+"custom/color": {
+  "format": "",
+  "tooltip": false,
+  "on-click": "hyprpicker -a"
+  },
+
+"custom/clipboard": {
+  "format": "",
+  "tooltip": false,
+  "on-click": "kitty --class clipse -e 'clipse'",
+  },
+
+"group/utils":{
+  "orientation": "inherit",
+  "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": false,
+    },
+  "modules":  [
+      "custom/screenshot",
+      "custom/color",
+      "custom/clipboard",
+    ]
+  },
+
+}

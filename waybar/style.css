@@ -1,0 +1,134 @@
+@import "Nocturne.css";
+
+* {
+  font-family: "42dot Sans";
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#waybar {
+  background: transparent;
+  border-radius: 13px;
+  opacity: 0.9;
+}
+
+.module {
+  padding: 0 10px;
+  margin: 3px;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.module:hover {
+  background-color: @dark;  /* Hover arka plan rengi */
+}
+
+.module:active {
+  background-color: @accent-light;  /* Aktif modül rengi */
+}
+
+#workspaces {
+  background-color: @highlight;
+  border-radius: 13px;
+  margin: 3px;
+    transition: background-color 0.2s ease;
+}
+
+#workspaces button {
+  color: @dark;  /* Button renkleri */
+  background: none;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  color: @highlight;
+  background: @dark;
+  border-radius: 15px;
+  margin: 2px 0px;
+  transition: background-color 0.2s ease;
+
+}
+
+#window {
+  margin: 3px;
+  color: @dark;
+  background-color: @highlight
+}
+
+window#waybar.empty #window {
+  background-color: transparent
+}
+
+#clock {
+  margin: 3px;
+  color: @dark;
+  background-color: @highlight;
+}
+
+#bluetooth {
+  color: white;
+}
+
+#network {
+  color: white;
+}
+
+#pulseaudio {
+  color: @dark;
+  margin: 3px;
+  background: @highlight;
+}
+
+#custom-swaync {
+  color: @highlight;
+}
+
+.icon {
+  margin-right: 100px;
+}
+
+#custom-seperator {
+  color: @overlay-light;
+  opacity: 0.5;
+  background: none;
+}
+
+#mpris {
+  color: @accent-light;
+  border-radius: 13px;
+  background: @surface-light;
+  margin: 3px 0px;
+}
+
+#custom-quit {
+  color: @muted-light;
+}
+
+#custom-reboot {
+  color: @primary-light;
+}
+
+#custom-lock {
+  color: @subtext-light;
+}
+
+#custom-sleep {
+  color: @subtext-light;
+}
+
+#custom-screenshot {
+  color: @text-light;
+  border-radius: 20px;
+}
+
+#custom-clipboard {
+  color: @text-light;
+  border-radius: 20px;
+}
+
+#custom-color {
+  color: @text-light;
+  border-radius: 20px;
+}
+
+
