@@ -1,2 +1,2 @@
 # Dotfiles
-dotfiles of my Nocturne Hyrpland config
+dotfiles of my Nocturne Hyprland config
