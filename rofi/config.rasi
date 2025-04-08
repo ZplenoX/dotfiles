@@ -59,7 +59,6 @@ listview {
     border-color:     @bg;
     margin:           7px;
     scrollbar:      false;
-    element-background-color: @bg;
 }
 
 element {
