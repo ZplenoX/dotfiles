@@ -1,0 +1,92 @@
+configuration {
+  modes: "drun,window,run";
+  show-icons: true;
+  icon-theme: "Adwaita";
+  font: "42dot Sans 14";
+  hide-scrollbar: true;
+}
+
+  * {
+    bg:    #1E1E1E60;
+    bg2:   #3A3A3A20;
+    fg:    #F0F0F060;
+    sf:    #B8B8B810;
+    hl:    #7AA5FF75;
+    tx:      #E0E0E0;
+}
+
+window {
+    transparency:       "real";
+    background-color:      @bg;
+    anchor:              north;
+    location:           center;
+    width:                 640;
+    border-radius:          15;
+    border-color:          @sf;
+    border:                5px;
+}
+
+inputbar {
+    background-color:         @sf;
+    border-radius:            8px;
+    padding:            15px 12px;
+    margin:            0 0 0px 0;
+    children: [entry];
+}
+
+entry {
+    font:                        inherit;
+    placeholder:       "Search Anything...";
+    placeholder-color:               @fg;
+    text-color:                      @tx;
+}
+
+prompt {
+  text-color: @tx;
+}
+
+message {
+    border:             0px 0 0;
+    border-color:       @bg;
+    background-color:   @bg;
+}
+
+listview {
+    lines:      10;
+    columns:    1;
+    fixed-height:   false;
+    border:          none;
+    border-color:     @bg;
+    margin:           7px;
+    scrollbar:      false;
+    element-background-color: @bg;
+}
+
+element {
+    padding:                8px 16px;
+    border-radius:              10px;
+}
+
+element normal.normal{
+    text-color: @tx;
+    background-color:  @sf;
+}
+
+element alternate.normal {
+  background-color: transparent;
+  text-color:       @tx;
+}
+
+element selected normal, element selected active {
+    background-color:   @hl;
+    text-color:         @tx;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+button {
+  background-color:  @bg;
+  text-color:        @tx;
+}
