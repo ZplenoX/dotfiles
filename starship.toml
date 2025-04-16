@@ -1,11 +1,20 @@
 add_newline = false 
+
 format = """
 [╭─](bold #DEE1EE)[](#DEE1EE)\
 $directory\
 [](bg:#9EC9B7 fg:#DEE1EE)\
 $git_branch$git_status\
 [](fg:#9EC9B7)\
-\n[╰─>](bold #DEE1EE) 
+\n[╰─>](bold #DEE1EE)
+"""
+
+right_format = """\
+[](#9EC9B7)\
+[ 󰥔 ](bg:#9EC9B7 fg:#1E2E2E)\
+[](fg:#9EC9B7 bg:#DEE1EE)\
+[ $time ](bg:#DEE1EE fg:#1E1E2E bold)\
+[](fg:#DEE1EE)\
 """
 
 [directory]
@@ -32,7 +41,8 @@ disabled = false
 [time]
 disabled = false
 time_format = "%H:%M"
-format = "[  $time ](bold #9EC9B7)"
+format = "[ $time ]($style)"
+style = "bg:#DEE1EE fg:#1E1E2E bold"
 
 [cmd_duration]
 format = "[  $duration ](bold #9EC9B7)"
